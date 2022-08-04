@@ -26,8 +26,20 @@ entradaDados.question('Digite o nome do aluno(a): \n', function (nomeAlun){
         entradaDados.question('Digite o sexo do aluno(a): \n', function(sexoAlun){
             let sexoA = sexoAlun
 
+            if(sexoA == 'feminino'){
+                sexoA = 'aluna'
+            }else{
+                sexoA = 'aluno'
+            }
+
             entradaDados.question('Digite o sexo do professor(a): \n', function(sexoProf){
                 let sexoP = sexoProf
+
+            if(sexoP == 'feminino'){
+                sexoP = 'professora'
+            }else{
+                sexoA = 'professor'
+            }
 
                 entradaDados.question('Digite o nome do curso: \n', function(curso){
                     let curs = curso
@@ -46,7 +58,9 @@ entradaDados.question('Digite o nome do aluno(a): \n', function (nomeAlun){
 
                         entradaDados.question('Entrar com o valor da nota 4: \n', function(valor4){
                             let nota4 = valor4
-                            let media
+
+                            console.log('Ola ' + sexoA + 'sua media eh ' + media)
+
 
                             entradaDados.close()
 
