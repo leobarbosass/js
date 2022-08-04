@@ -1,49 +1,52 @@
-console.log('---CALCULADORA SIMPLES--- \n')
+/*
+    - Objetivo: Fazer uma calculadora básica
+    - Autor: Leonardo Barbosa
+    - Data: 01/08/2022
+    - Versão: 1.0
+*/
 
-//import da biblioteca de entrada de dados
+
+console.log('--- CALCULADORA SIMPLES --- \n      ')
+
+const {calcular} = require('./modulos/calculadora.js')
+//Import da biblioteca de entrada de dados
 var readline = require('readline')
 
-//instancia do objeto entradaDados
+
+//Instancia do objeto entradaDados
 var entradaDados = readline.createInterface({
+
     input: process.stdin,
     output: process.stdout
+
 })
 
-//entrada do valor1 ( parse para tirar de String e colocar em float)
-entradaDados.question('Informe o numero1: \n', function(valor1){
+
+//Entrada do valor 1
+entradaDados.question('Digite o primeiro numero: \n', function (valor1){
+    //Declarando a variavel e convertendo o valor digitado pelo usuario em float
     let numero1 = parseFloat(valor1)
 
-    entradaDados.question('Informe o numero2: \n', function(valor2){
+    //typeof -- varifica qual o tipo de dados de uma variavel ou objeto
+ 
+    entradaDados.question('Digite o segundo numero: \n', function (valor2){
         let numero2 = parseFloat(valor2)
 
-        //VERIFICA E INFORMA O TIPO DE DADOS DA VARIAVEL
-        //console.log(typeof(numero1)) ---> NUMBER
-        //console.log(typeof(valor1))  ---> STRING
-
-        entradaDados.question('Informe a operacao a ser calculada: somar [+], subtrair [-], multiplicar [*] ou dividir [/] \n', function(opcao){
-            //DECLARANDO A VARIAVEL QUE VAI RECEBER O TIPO DE OPERACAO MATEMATICA E CONVERTENDO O TEXTO DIGITADO EM MAIUSCULO
-            //toUpperCase() -> converte em MAIUSCULO
-            //toLowerCase() -> converte em minusculo
+    
+        entradaDados.question('Escolha a operacao a ser calculada: somar[+], subtrair[-], multiplicar[*], dividir[/] \n', function(opcao){
+            //Declarando a variavel que vai receber o tipo de operaco matematica e convertendo o texto digitado em maiusculo.
+            //toUpperCase() -- converte em MAIUSCULO
+            //toLowerCase() -- converte em minusculo
             let operacao = opcao.toUpperCase()
-
-            //VARIAVEL PARA AS OPERACOES
             let resultado
 
-            if(operacao == 'SOMAR' || operacao == '+'){
-                resultado = numero1 + numero2
-            }else if(operacao == 'SUBTRAIR' || operacao == '-'){
-                resultado = numero1 - numero2
-            }else if(operacao == 'MULTIPLICAR' || operacao == '*'){
-                resultado = numero1 * numero2
-            }else if(operacao == 'DIVIDIR' || operacao == '/'){
-                resultado = numero1 / numero2
-            }else{
-                resultado = 'ERRO: Nao foi escolhida a operacao matematica \n'
+            //Chama a funcao que realizara os calculos
+            if (resultado = calcular(numero1, numero2, operacao))
+            {
+                console.log('O resultado é: ' + resultado)
             }
-
-            console.log(resultado)
-
+            
             entradaDados.close()
-        })
+       })
     })
-})
+ })
