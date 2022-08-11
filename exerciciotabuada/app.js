@@ -33,19 +33,34 @@ entradaDados.question('Digite o numero a ser calculado, de 2 a 100\n', function(
         console.log('Digite um numero de 2 a 100')
         exit()
     }
-
-    entradaDados.question('Digite até que numero voce vai calcular\n', function(numero2){
-        let tabuada2 = numero2
-
-        if( numero2 == ''){
+    entradaDados.question('Digite outro numero a ser calculado, de 2 a 100\n', function(numero3){
+        let tabuada3 = numero3
+    
+        if( numero3 == ''){
             console.log('O campo deve ser prenchido')
             exit()
         }
+    
+        if (tabuada3 > 100) {
+            console.log('Digite um numero de 2 a 100')
+            exit()
+        }else if(tabuada3 < 2){ 
+            console.log('Digite um numero de 2 a 100')
+            exit()
+        }
+
+        entradaDados.question('Digite até que numero voce vai calcular\n', function(numero2){
+            let tabuada2 = numero2
+
+            if( numero2 == ''){
+                console.log('O campo deve ser prenchido')
+                exit()
+            }
 
 
-        calcularTabuada(tabuada, tabuada2)
+            calcularTabuada(tabuada, tabuada2, tabuada3)
 
-        entradaDados.close()
+            entradaDados.close()
+        })
     })
-
 })
