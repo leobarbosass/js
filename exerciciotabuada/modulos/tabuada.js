@@ -7,7 +7,7 @@
 
 
 const calcularTabuada = function(numero1, numero2, numero3){
-    let tabuada1 = numero1
+    let tabuada = numero1
     let cont = 0
     let resultado
     let tabuada2 = numero2
@@ -16,7 +16,7 @@ const calcularTabuada = function(numero1, numero2, numero3){
         console.log('\n--- PRIMEIRA TABUADA --- \n')
             while(cont <= tabuada2){
 
-                resultado = tabuada1 * cont
+                resultado = tabuada * cont
                 console.log(tabuada3 + ' x ' + cont + ' = ' + resultado)
                 cont = cont + 1
             }
