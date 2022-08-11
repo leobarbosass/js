@@ -17,7 +17,7 @@ const calcularTabuada = function(numero1, numero2, numero3){
             while(cont <= tabuada2){
 
                 resultado = tabuada * cont
-                console.log(tabuada3 + ' x ' + cont + ' = ' + resultado)
+                console.log(tabuada + ' x ' + cont + ' = ' + resultado)
                 cont = cont + 1
             }
             console.log('\n--- SEGUNDA TABUADA ---\n')
