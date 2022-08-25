@@ -106,13 +106,48 @@
     
     console.log(' ========= CADE O GRU =========')
 
-    listaContatos = {
-        nome: 'Leonardo Barbosa',
-        idade: '16',
-        telefone: '996336638',
-        email: 'leonardobarbosantos@gmail.com'
-    }
+    listaContatos = [
+        {
+            nome: 'Leonardo Barbosa',
+            idade: '16',
+            telefone: '996336638',
+            email: 'leonardobarbosantos@gmail.com',
+            carros: [
+                {
+                    placa: 'abc-1234',
+                    modelo: 'Corsa',
+                    cor: 'prata'
+                },
+                {
+                    placa: 'sss-1555',
+                    modelo: 's15',
+                    cor: 'vermelho'
+                }
+            ]
+        },
+        {
+            nome: 'Heitor piroquinha',
+            idade: '16',
+            telefone: '88888888',
+            email: 'eitorpintopqp@gmail.com'
+        }
+    ]
 
     console.log(listaContatos)
+
+    console.log('+++')
     console.log(listaContatos.nome)
     console.log(listaContatos.email)
+
+    //adiciona novo elemento no JSON em execucao
+    listaContatos.celular = '(11) 996336638'
+    console.log(listaContatos)
+
+
+    console.log('=====================')
+
+    //remove um elemento no JSON em execucao
+    delete(listaContatos.telefone)
+    console.log(listaContatos)
+
+    console.log('Placa: ' + listaContatos[0].carros[0].placa)
