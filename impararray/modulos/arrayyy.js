@@ -20,7 +20,7 @@ const par = function(valor1, valor2){
 
     for(numero1; numero1 <=numero2; numero1 ++){
         if(numero1 % 2 ==0){
-            
+
             pares.push(numero1)
         }
     }
