@@ -56,7 +56,13 @@ entradaDados.question('Digite o numero a ser calculado, de 2 a 100\n', function(
                 console.log('O campo deve ser prenchido')
                 exit()
             }
-
+            if(tabuada2 > 50){
+                console.log('Digite um numero de 1 a 50')
+                exit()
+            }else if( tabuada2 < 1){
+                console.log('Digite um numero de 1 a 50')
+                exit()
+            }
 
             calcularTabuada(tabuada, tabuada2, tabuada3)
 
