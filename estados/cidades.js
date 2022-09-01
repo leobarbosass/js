@@ -22431,10 +22431,6 @@
     }
  ]
  
- 
-   
- 
-   
      const getEstado = function(estadoss){
          //cria um objeto do tipo JSON
          let sigla = estadoss
