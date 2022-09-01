@@ -22465,7 +22465,7 @@
    
      }
    
-    console.log(getEstado('SP'))
+    console.table(getEstado('SP'))
    
    
    
