@@ -22435,9 +22435,8 @@
    
  
    
-    //Retorna os dados de um estado tendo como base a sigla
      const getEstado = function(estadoss){
-         //Cria um objeto do tipo JSON
+         //cria um objeto do tipo JSON
          let sigla = estadoss
          let estado = []
          let erro = true
@@ -22449,9 +22448,9 @@
            
            city.forEach(item => {
    
-             //Localiza um item no array (indexOf())
+             //localiza um item dentro do array (indexOf())
          if(item.sigla.indexOf(sigla.toUpperCase())== 0){
-             //Criamos as chaves uf e descricao para enviar pelo JSON
+             //cria as chaves uf e descricao para enviar pelo JSON
                    for(let i = 0; i < item.cidades.length; i++){
                      estado.push(item.cidades[i].nome)
                      erro = false 
@@ -22470,11 +22469,6 @@
    
      }
    
- 
- 
-       
- 
-    //console.table(getEstados())
     console.log(getEstado('SP'))
    
    
