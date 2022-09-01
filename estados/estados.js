@@ -1,3 +1,9 @@
+/******************************************************
+ * Onjetivo: Obter uma lista de estados
+ * Data: 29/08/22
+ * Autor: Leonardo Barbosa
+ ****************************************************/
+
 //'API'
 var estados = [
 
